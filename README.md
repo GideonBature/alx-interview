@@ -22,6 +22,4 @@ Dive into our problems directory to start solving, or browse the issues tab to s
 
 ## Topics Covered:
 
------
-
 ### 0x00. [Pascal's Triangle](https://github.com/GideonBature/alx-interview/tree/main/0x00-pascal_triangle)
