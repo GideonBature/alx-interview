@@ -26,4 +26,6 @@ Dive into our problems directory to start solving, or browse the issues tab to s
 
 ### 0x01. [Lockboxes](https://github.com/GideonBature/alx-interview/tree/main/0x01-lockboxes)
 
+### 0x02. [Minimum Operations](https://github.com/GideonBature/alx-interview/tree/main/0x02-minimum_operations)
+
 ### 0x03. [Log Parsing](https://github.com/GideonBature/alx-interview/tree/main/0x03-log_parsing)
