@@ -25,3 +25,5 @@ Dive into our problems directory to start solving, or browse the issues tab to s
 ### 0x00. [Pascal's Triangle](https://github.com/GideonBature/alx-interview/tree/main/0x00-pascal_triangle)
 
 ### 0x01. [Lockboxes](https://github.com/GideonBature/alx-interview/tree/main/0x01-lockboxes)
+
+### 0x03. [Log Parsing](https://github.com/GideonBature/alx-interview/tree/main/0x03-log_parsing)
