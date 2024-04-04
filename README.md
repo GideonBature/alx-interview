@@ -29,3 +29,5 @@ Dive into our problems directory to start solving, or browse the issues tab to s
 ### 0x02. [Minimum Operations](https://github.com/GideonBature/alx-interview/tree/main/0x02-minimum_operations)
 
 ### 0x03. [Log Parsing](https://github.com/GideonBature/alx-interview/tree/main/0x03-log_parsing)
+
+### 0x04. [UTF-8 Validation](https://github.com/GideonBature/alx-interview/tree/main/0x04-utf8_validation)
