@@ -5,8 +5,8 @@ const movieURL = `https://swapi-api.alx-tools.com/api/films/${movieId}/`;
 
 function fetchUrl (url) {
   return new Promise((resolve, reject) => {
-    request(url, { json: true }, (err, res, body) => {
-      if (err) reject(err);
+    request(url, { json: true }, (error, resonse, body) => {
+      if (error) reject(error);
       resolve(body);
     });
   });
