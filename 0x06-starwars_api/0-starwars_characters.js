@@ -18,10 +18,10 @@ async function fetchAPIData (movieId) {
   try {
     const filmData = await getAPIRequest(`https://swapi-api.alx-tools.com/api/films/${movieId}/`);
     const charactersURL = filmData.characters;
-    for (const url of charactersURL) {
+    charactersURL.forEach(async (url) => {
       const characterData = await getAPIRequest(url);
       console.log(characterData.name);
-    }
+    })
   } catch (error) {
     console.error(error);
   }
