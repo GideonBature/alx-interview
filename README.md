@@ -35,3 +35,5 @@ Dive into our problems directory to start solving, or browse the issues tab to s
 ### 0x05. [N Queens](https://github.com/GideonBature/alx-interview/tree/main/0x05-nqueens)
 
 ### 0x06. [Star Wars API](https://github.com/GideonBature/alx-interview/tree/main/0x06-starwars_api)
+
+### 0x07. [Rotate 2D Matrix](https://github.com/GideonBature/alx-interview/tree/main/0x07-rotate_2d_matrix)
