@@ -39,3 +39,5 @@ Dive into our problems directory to start solving, or browse the issues tab to s
 ### 0x07. [Rotate 2D Matrix](https://github.com/GideonBature/alx-interview/tree/main/0x07-rotate_2d_matrix)
 
 ### 0x08. [Making Change](https://github.com/GideonBature/alx-interview/tree/main/0x08-making_change)
+
+### 0x09. [Island Perimeter](https://github.com/GideonBature/alx-interview/tree/main/0x09-island_perimeter)
