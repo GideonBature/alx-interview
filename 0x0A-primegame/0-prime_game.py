@@ -1,88 +1,61 @@
 #!/usr/bin/python3
-"""prime game
+"""Prime Game
 """
 
+
+def is_prime(num):
+    """
+    Check if a number is prime.
+
+    Args:
+        num (int): The number to check.
+
+    Returns:
+        bool: True if the number is prime, False otherwise.
+    """
+    if num < 2:
+        return False
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+
 def isWinner(x, nums):
-  """
-  This function determines the winner of a game where players take turns
-  choosing prime numbers and removing them and their multiples from a set.
+    """Determine the winner of each round in the prime game.
 
-  Args:
-      x: The number of rounds of the game.
-      nums: An array of integers representing the starting set for each round.
+    Args:
+        x (int): The number of rounds.
+        nums (list): A list of integers representing the ranges for each round.
 
-  Returns:
-      A string indicating the winner ("Maria" or "Ben") or None if the winner 
-      cannot be determined.
-  """
+    Returns:
+        str or None: The name of the player that won the most rounds.
+        If the winner cannot be determined, returns None.
+    """
+    # Function to find the next prime number in the set
+    def find_next_prime(current, nums):
+        for i in range(current + 1, len(nums)):
+            if is_prime(nums[i]):
+                return nums[i]
+        return -1
 
-  maria_wins = 0
-  ben_wins = 0
-  for num in nums:
-    # Check if the number itself is prime (corner case for n=1)
-    if num == 1:
-      ben_wins += 1
-      continue
+    # Main game logic
+    winners = {'Maria': 0, 'Ben': 0}
 
-    # Track whose turn it is (Maria starts)
-    turn = "Maria"
-    while True:
-      # Find the smallest prime factor of the current number
-      prime_factor = find_prime_factor(num)
+    for n in nums:
+        # Counting the number of primes in the given range
+        primes_count = sum(1 for num in range(1, n + 1) if is_prime(num))
 
-      # Remove the prime factor and its multiples
-      num = remove_multiples(num, prime_factor)
-
-      # Check if the number is reduced to 1
-      if num == 1:
-        if turn == "Maria":
-          ben_wins += 1
+        # If the number of primes is even, Ben wins. Otherwise, Maria wins.
+        if primes_count % 2 == 0:
+            winners['Ben'] += 1
         else:
-          maria_wins += 1
-        break
+            winners['Maria'] += 1
 
-      # Switch turns
-      turn = "Ben" if turn == "Maria" else "Maria"
-
-  # Determine the winner based on win count
-  if maria_wins > ben_wins:
-    return "Maria"
-  elif ben_wins > maria_wins:
-    return "Ben"
-  else:
-    return None
-
-def find_prime_factor(num):
-  """
-  This helper function finds the smallest prime factor of a number.
-
-  Args:
-      num: The number to find the prime factor for.
-
-  Returns:
-      The smallest prime factor of the number.
-  """
-  # Iterate through potential prime factors (2 is always the first prime)
-  for i in range(2, int(num**0.5) + 1):
-    if num % i == 0:
-      return i
-  return num  # num itself is prime
-
-def remove_multiples(num, prime):
-  """
-  This helper function removes the prime factor and its multiples from a number.
-
-  Args:
-      num: The number to remove multiples from.
-      prime: The prime factor to remove.
-
-  Returns:
-      The number with multiples of the prime factor removed.
-  """
-  while num % prime == 0:
-    num //= prime
-  return num
-
-# Example usage
-print("Winner:", isWinner(5, [2, 5, 1, 4, 3]))
-
+    # Determining the winner with the most wins
+    if winners['Maria'] == winners['Ben']:
+        return None
+    elif winners['Maria'] > winners['Ben']:
+        return 'Maria'
+    else:
+        return 'Ben'
